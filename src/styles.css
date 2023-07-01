@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(51, 51, 51);
+  font-family: "Maven Pro", sans-serif; /* Nowe */
+  background-color: #eee;
+}
+
+.main {
+  text-align: center;
+  width: 95%;
+  margin: auto auto;
+}
+.policyBtn {
+  height: 33vh;
+  width: 45vw;
+
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.policyBtn.liberal {
+  margin-right: 5px;
+}
+
+.deck {
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 80px;
+}
+.round {
+  padding: 5px;
+}
+
+button.playersBtn {
+  border: 1px solid #b5b5b5;
+  margin: 0 0.5%;
+  /* width: 13%; */
+  height: 75px;
+  border-radius: 10px;
+  background: #444;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.playersBtn.selected {
+  background: #fdfdfd !important;
+  color: #444;
+  border-width: 3px;
+}
+
+.liberal,
+button.addPlayerBtn,
+.setPlayerBtn {
+  background-color: #48b0da !important;
+  color: #fff;
+}
+.whiteTxt {
+  color: #fff;
+}
+.fascist,
+button.removePlayerBtn {
+  background-color: #f04e1c !important;
+  color: #fff;
+}
+
+.govtOfficial {
+  color: #999898;
+  /* font-weight: 100; */
+  font-size: 12px;
+}
+
+.modal {
+  position: fixed;
+  background: #4c4c4cc9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 0 5px 5px #9a9a9a;
+  top: 0;
+  height: 100%;
+}
+.hidden {
+  display: none;
+}
+.modal-content {
+  position: absolute;
+  width: 50%;
+  left: 15%;
+  top: 25%;
+  background: #eee;
+  padding: 0 10% 5% 10%;
+  border-radius: 8px;
+}
+button.skipBtn {
+  margin-top: 20px;
+  width: calc(100% - 4%);
+  border: 1px solid #c7c7c7;
+  line-height: 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #444;
+  color: #eee;
+  padding: 20px;
+}
+button.addPlayerBtn,
+button.removePlayerBtn,
+.setPlayerBtn {
+  margin: 0 1%;
+  height: 50px;
+  border: 1px solid #a2a2a2;
+  border-radius: 5px;
+}
+
+button.addPlayerBtn,
+button.removePlayerBtn {
+  width: 48%;
+  font-size: 24px;
+}
+
+.setPlayerBtn {
+  width: 100%;
+  font-size: 20px;
+}
+.playerSplit span {
+  padding: 3px 8px;
+  font-family: 800;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .policyBtn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
