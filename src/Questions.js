@@ -4,7 +4,7 @@ const LIBERAL = "liberal";
 const GameWizard = () => {
   const [cardsInDeck, setCardsInDeck] = useState({
     [FASCIST]: 11,
-    [LIBERAL]: 6
+    [LIBERAL]: 6,
   });
   const [playedCard, setPlayedCard] = useState(null);
   const [presidentDiscard, setPresidentDiscard] = useState(null);
@@ -49,8 +49,8 @@ const GameWizard = () => {
         chancellorDiscard,
         odds: roundOdds,
         cardsInDeckUnlinked,
-        currGovt
-      }
+        currGovt,
+      },
     ]);
     setPlayedCard(null);
     setPresidentDiscard(null);
@@ -61,20 +61,20 @@ const GameWizard = () => {
   const steps = [
     {
       question: "Which card was played?",
-      onChoose: playCard
+      onChoose: playCard,
     },
     {
       question: "What do you believe did the Chancellor discard?",
       onChoose: discardCard,
       by: setChancellorDiscard,
-      onSkip
+      onSkip,
     },
     {
       question: "What do you believe did the President discard?",
       onChoose: discardCard,
       by: setPresidentDiscard,
-      onSkip
-    }
+      onSkip,
+    },
   ];
 
   const calcOverallConfidence = () => {
@@ -209,7 +209,7 @@ function GameQuestion({
   by,
   setIsInStep,
   setCurrGovt,
-  onSkip
+  onSkip,
 }) {
   return (
     <>
@@ -262,7 +262,7 @@ function DeckStatus({ setCardsInDeck, cardsInDeck, rounds, isInStep }) {
     });
     const discards = [
       ...roundwCurr.map((r) => r.presidentDiscard),
-      ...roundwCurr.map((r) => r.chancellorDiscard)
+      ...roundwCurr.map((r) => r.chancellorDiscard),
     ];
     const libCards =
       discards.filter((d) => d === LIBERAL).length + cardsInDeck[LIBERAL];
@@ -360,7 +360,7 @@ const Picker = ({ numberOfPlayers, reset, setCurrGovt, rounds }) => {
   };
   return (
     <div>
-      <h4>Goverment</h4>
+      <h4>Government</h4>
       {Array.from({ length: numberOfPlayers }, (_, i) => i + 1).map(
         (player) => (
           <button
@@ -372,7 +372,7 @@ const Picker = ({ numberOfPlayers, reset, setCurrGovt, rounds }) => {
             onClick={() => handleClick(player)}
             style={{
               background: matchPlayedRecord(player, true),
-              width: `${calcWidth()}%`
+              width: `${calcWidth()}%`,
             }}
           >
             <div>{player}</div>
